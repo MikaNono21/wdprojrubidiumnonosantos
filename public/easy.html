@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Mariana Santos, Mikaela Nono" />
+    <title>Easy Level</title>
+    <link rel="stylesheet" type="text/css" href="easystyle.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/pngtree-gold-necklace-with-intricate-diamond-detailing-png-image_14302288-removebg-preview.png?v=1734943339629"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- adds a dropdown tab for easy access to Home, Medium and Hard-->
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fa fa-home"></i> Menu</button>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="medium.html">Medium</a>
+        <a href="hard.html">Hard</a>
+      </div>
+    </div>
+
+    <div id="main_content">
+      <!-- Tab buttons -->
+      <ul>
+        <!-- Tab button for Incident Report-->
+        <li class="selected" id="page1" onclick="change_tab(this.id);">
+          Incident Report
+        </li>
+        <!-- Tab button for Evidences-->
+        <li class="notselected" id="page2" onclick="change_tab(this.id);">
+          Evidences
+        </li>
+        <!-- Tab button for Suspects-->
+        <li class="notselected" id="page3" onclick="change_tab(this.id);">
+          Suspects
+        </li>
+      </ul>
+
+      <!-- Tab contents -->
+      <div class="tab-content active" id="page1_content">
+        <h2 style="text-align: center">
+          <!-- Adds a header 2 of the Title Case-->
+          Case File 1: The Robbery of a Family Heirloom
+        </h2>
+        <h3>
+          <!-- Adds the header 3 opening message for the player-->
+          Hello, Detective, and welcome to your first case! The royal family
+          admires your skills and is counting on you. We believe you have what
+          it takes to solve this mystery—failure is not an option. Prove us
+          right, and a generous cash prize awaits. Good luck!
+        </h3>
+        <div id="image-container" style="display: none">
+          <!-- Adds the image of the Incident Report-->
+          <img
+            src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/CASE%201%20%20EASY.jpg?v=1734845675335"
+            class="image"
+          />
+        </div>
+        <div class="button-container">
+          <!-- Adds a button to see the Incident Report image-->
+          <button onclick="revealImage()">Open Case File</button>
+        </div>
+      </div>
+
+      <div class="tab-content" id="page2_content">
+        <!-- Makes a header for the Evidences tab-->
+        <h2>Evidences at the Crime Scene</h2>
+        <p>
+          <!-- adds a picture for footprints evidence-->
+          <img
+            src="https://static-00.iconduck.com/assets.00/footprints-emoji-375x512-yaftmrym.png"
+            width="50"
+            height="70"
+          /><!-- adds a description for footprints evidence-->
+          1. Suspicious Footprints: A set of footprints was discovered near the
+          castle basement door. The prints appear fresh, leading away from the
+          entrance and toward a side exit of the castle. The footprints are too
+          small to belong to a fully grown adult, raising questions about the
+          thief’s identity.
+        </p>
+        <p>
+          <!-- adds a picture for door marks evidence-->
+          <img
+            src="https://img.freepik.com/free-vector/old-door-with-broken-glass_1308-17479.jpg"
+            width="50"
+            height="70"
+          /><!-- adds a description for door marks evidence-->
+          2. Basement Door Marks: There are subtle signs of forced entry around
+          the basement door lock, suggesting the thief had to break in. However,
+          there are no signs of struggle or alarms triggered, meaning the thief
+          was likely familiar with the castle and its security systems.
+        </p>
+        <!-- adds a paragraph for witness testimonies-->
+        <p>3. Witness Testimonies:</p>
+        <!-- adds a ordered list for witness testimonies-->
+        <ol>
+          <li>
+            <!-- testimony of castle guard-->
+            • The Castle Guard: The guard on duty reported seeing a figure near
+            the basement around the time of the theft. However, the figure was
+            wearing a cloak, making it difficult to identify. The guard
+            mentioned hearing faint footsteps but did not stop the figure,
+            assuming it was a castle worker.
+          </li>
+          <li>
+            <!-- testimony of housekeeper-->
+            • The Housekeeper: The housekeeper stated she had seen the necklace
+            in the basement the day before, but she did not notice anything
+            unusual until the theft was discovered. She mentioned that only a
+            few trusted individuals knew about the heirloom’s location.
+          </li>
+          <li>
+            <!-- testimony of lady-in-waiting-->
+            • The Lady-in-Waiting: The Lady-in-Waiting, who is often in and out
+            of the basement for various errands, seemed unusually nervous when
+            questioned. She claimed to have no knowledge of the necklace’s
+            disappearance but appeared agitated when asked about her whereabouts
+            during the time of the theft.
+          </li>
+        </ol>
+      </div>
+
+      <div class="tab-content" id="page3_content">
+        <h2>Suspects</h2>
+        <!-- adds a header for the suspects tab-->
+
+        <p>Hover to see evidence for each suspect. Choose wisely, Detective!</p>
+        <!-- Adds a hover effect to the pictures and texts-->
+        <div class="suspect-row">
+          <div class="container">
+            <!-- Image for the first suspect (Hover) -->
+            <img
+              src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/castleguard.image.png?v=1734843737149"
+              alt="Avatar"
+              class="image"
+            />
+            <div class="overlay">
+              <div class="text">
+                <!-- adds description for the suspect -->
+                The Castle Guard: Assigned near the basement, the guard was
+                aware of all activities. His vague description of a cloaked
+                figure and expertise in security suggest he might have stolen
+                the necklace without triggering alarms.
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <!-- Image for the second suspect (Hover) -->
+            <img
+              src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/b1f19e28-bf65-4300-acc5-f3bfd50cfb0a.image.png?v=1734844239934"
+              alt="Avatar"
+              class="image"
+            />
+            <div class="overlay">
+              <div class="text">
+                <!-- adds description for the suspect -->
+                The Lady-in-Waiting: As a trusted member of the royal staff, the
+                Lady-in-Waiting had frequent access to the basement. Her nervous
+                behavior and unusual agitation when questioned make her a prime
+                suspect. It’s possible that she knew the necklace was there and
+                took it for herself, hoping no one would suspect her.
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <!-- Image for the third suspect (Hover) -->
+            <img
+              src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/88c1a07d-a9ee-4b82-ad10-a8008c702b7e.image.png?v=1734844601596"
+              alt="Avatar"
+              class="image"
+            />
+            <div class="overlay">
+              <div class="text">
+                <!-- adds description for the suspect -->
+                The Housekeeper: The housekeeper is one of the few people who
+                knew about the necklace’s location. She was responsible for
+                cleaning the basement and might have had the opportunity to take
+                the heirloom while in the area. However, her calm demeanor when
+                questioned raises doubts about her involvement.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- Section that asks the player abouut the true suspect -->
+          <label for="suspect-input"
+            >Which do you think is the suspect? Enter A, B, or C:</label
+          ><br />
+          <!-- fixes the type, id, maxlength, and placeholder of the input box -->
+          <input
+            type="text"
+            id="suspect-input"
+            maxlength="1"
+            placeholder="A, B, or C"
+          />
+          <!-- adds button for the submission box of the player's input -->
+          <button onclick="submitSuspect()">Submit</button>
+        </div>
+        <!-- creates ID for the result -->
+        <p id="result"></p>
+      </div>
+    </div>
+    <footer>
+      <!-- creates a footer for the game-->
+      <p>&copy; 2024 Mystwood Mysteries. All Rights Reserved.</p>
+      <!-- References for the pictures used -->
+      <p>
+        BRGFX. (n.d.). Broken Door Illustration. FreePik. Retrieved December 23,
+        2024, from
+        https://www.freepik.com/free-photos-vectors/broken-door-illustration
+      </p>
+      <p>
+        English Guard Images – Browse 15,615 stock photos, vectors, and video.
+        (n.d.). Adobe Stock. Retrieved December 23, 2024, from
+        https://stock.adobe.com/ph/search?k=english+guard
+      </p>
+      <p>
+        Little Women Silhouette. (n.d.). Clipart Library. Retrieved December 23,
+        2024, from
+        https://clipart-library.com/clip-art/44-446461_woman-thinking-silhouette-png-download-thinking-icon-png.htm
+      </p>
+      <p>
+        UnitySTR. (2023, May 16). Modular Medieval Castle - town - Castle - free
+        Unreal Engine asset.
+        https://unitystr.com/product/modular-medieval-castle-town-castle/
+      </p>
+    </footer>
+    <script src="easy.js"></script>
+  </body>
+</html>

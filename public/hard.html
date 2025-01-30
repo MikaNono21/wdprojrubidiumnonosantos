@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Mariana Santos, Mikaela Nono" />
+    <title>Hard Level</title>
+    <link rel="stylesheet" type="text/css" href="hardstyle.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/8b287415-eb44-4b6a-825f-ddd2a474411e-removebg-preview.png?v=1734944208661"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    
+  </head>
+  <body>
+    <!-- adds a dropdown tab for easy access to Home, Medium and Easy-->
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fa fa-home"></i> Menu</button>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="easy.html">Easy</a>
+        <a href="medium.html">Medium</a>
+      </div>
+    </div>
+
+    <div id="main_content">
+      <!-- Tab buttons -->
+      <ul>
+        <!-- Tab button for Incident Report-->
+        <li class="selected" id="page1" onclick="change_tab(this.id);">
+          Incident Report
+        </li>
+        <!-- Tab button for Evidences-->
+        <li class="notselected" id="page2" onclick="change_tab(this.id);">
+          Evidences
+        </li>
+        <!-- Tab button for Suspects-->
+        <li class="notselected" id="page3" onclick="change_tab(this.id);">
+          Suspects
+        </li>
+      </ul>
+
+      <!-- Tab contents -->
+      <div class="tab-content active" id="page1_content">
+        <!-- Adds a header of the Title Case-->
+        <h2 style="text-align: center">
+          Case File 3: The Murder of the Loyal Gardener
+        </h2>
+
+        <div id="image-container" style="display: none">
+          <!-- Adds the image of the Incident Report-->
+          <img
+            src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/CASE%203%20%20HARD.jpg?v=1734853356907"
+            class="image"
+          />
+        </div>
+        <div class="button-container">
+          <!-- Adds a button to see the Incident Report image-->
+          <button onclick="revealImage()">Open Case File</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tab-content" id="page2_content">
+      <!-- Makes a header for the Evidences tab-->
+      <h2>Evidences at the Crime Scene</h2>
+      <p><!-- adds a description for gardening tool evidence-->
+        1. Blood-Stained Gardening Tool: A gardening tool, likely the weapon
+        used in the murder, was found next to the body. It is covered in blood,
+        with traces of the gardener’s skin found under the handle, indicating a
+        violent confrontation. The tool appears to have been dropped hastily by
+        the killer.
+      </p>
+      <!-- adds a picture for gardening tool evidence-->
+      <img
+        src="https://thumbs.dreamstime.com/b/black-white-garden-shovel-illustration-landscaping-construction-use-image-features-meticulously-designed-purposes-346079095.jpg"
+        width="60"
+        height="80"
+        align="center"
+      />
+      <p><!-- adds a description for shards of glass evidence-->
+        2. Broken Shards of Glass: Nearby, the detective found broken glass
+        scattered across the ground. It appears to be from a shattered vase or
+        window, though it’s unclear if the glass is related to the murder or if
+        it was part of a struggle. Some shards have bloodstains, suggesting they
+        might have been involved in the altercation.
+      </p>
+      <!-- adds a picture for broken glass evidence-->
+      <img
+        src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/360_F_435120058_8hPsquqBNY1m3QYUWSEVDnTiRVBV11Nz-removebg-preview.png?v=1734851053814"
+        width="60"
+        height="80"
+      />
+      <p><!-- adds a description for footprints evidence-->
+        3. Strange Footprints: Unusual footprints lead away from the body,
+        headed toward the estate’s back gate. The prints are of a large boot,
+        possibly worn by a man, and appear to have been made in haste, as if the
+        person was fleeing the scene. The prints lead into the nearby woods, but
+        the trail is difficult to follow due to the terrain.
+      </p>
+      <!-- adds a picture for footprints evidence-->
+      <img
+        src="https://static-00.iconduck.com/assets.00/footprints-emoji-375x512-yaftmrym.png"
+        width="50"
+        height="70"
+      />
+
+      <p><!-- adds a description for pocketwatch evidence-->
+        4. Gardener’s Personal Effects: The gardener’s pocket watch, which is
+        typically worn around his neck, was found in the garden, broken open.
+        There are signs of a struggle nearby, and it is possible that the
+        gardener tried to defend himself before the attack.
+      </p>
+      <!-- adds a picture for pocketwatch evidence-->
+      <img
+        src="https://thegraphicsfairy.com/wp-content/uploads/2020/12/pocket-watch-Vintage-GraphicsFairy.jpg"
+        width="50"
+        height="70"
+      />
+      <!-- adds a paragraph for witness testimonies-->
+      <p>5. Witness Testimonies:</p>
+      <ol><!-- adds a ordered list for witness testimonies-->
+        <li><!-- testimony of royal family's maid-->
+          • The Royal Family’s Maid: The maid was one of the last to see the
+          gardener alive. She stated that she saw him speaking to someone
+          outside the royal garden gate earlier that day but couldn’t see the
+          other person clearly. She mentioned the gardener seemed uneasy but
+          didn’t indicate any trouble.
+        </li>
+        <br />
+        <li><!-- testimony of royal butler-->
+          • The Royal Butler: The butler, who had a routine of overseeing the
+          royal garden, mentioned hearing a loud noise coming from the yard in
+          the late afternoon. He rushed outside but arrived too late to stop the
+          crime. The butler did not see the gardener’s attacker but suspected
+          someone had entered the garden through the back gate.
+        </li>
+        <br />
+        <li><!-- testimony of neighboring farmer-->
+          • The Neighboring Farmer: A neighboring farmer, who lives just outside
+          the royal estate, heard shouting around the time of the murder. He
+          said that he saw a figure fleeing from the scene but could not make
+          out any details because it was getting dark. He did mention that the
+          figure appeared to be carrying something, though he couldn’t confirm
+          if it was the gardening tool or something else.
+        </li>
+      </ol>
+    </div>
+
+    <div class="tab-content" id="page3_content">
+      <!-- adds a header for the suspects tab-->
+      <h2>Suspects</h2>
+      <!-- Adds a hover effect to the pictures and texts-->
+      <p>Hover to see evidence for each suspect. Choose wisely, Detective!</p>
+      <div class="suspect-row">
+        <div class="container">
+          <!-- Image for the first suspect (Hover) -->
+          <img
+            src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/67f841dc-6a8b-4e43-8684-8d232214f584.image.png?v=1734851413056"
+            alt="Avatar"
+            class="image"
+          />
+          <div class="overlay">
+            <div class="text">
+              <!-- adds description for the suspect -->
+              The Royal Butler: Known for his close relationship with the royal
+              family, the butler had access to the prince at all times. He was
+              seen near the castle gardens on the day of the disappearance. The
+              torn piece of the cloak could have come from the prince while
+              struggling to break free from the butler’s grasp.
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <!-- Image for the second suspect (Hover) -->
+          <img
+            src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/a1eee556-6055-4829-bac8-21eb30e023be.image.png?v=1734854097055"
+            alt="Avatar"
+            class="image"
+          />
+          <div class="overlay">
+            <div class="text">
+              <!-- adds description for the suspect -->
+              The Neighboring Farmer: The farmer’s presence near the estate and
+              report of hearing shouting raise suspicion. He may have known the
+              gardener’s routine or held a grudge against the royal family, and
+              his claim of seeing a fleeing figure suggests deeper involvement.
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <!-- Image for the third suspect (Hover) -->
+          <img
+            src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/da546851-0233-4132-bafd-6f541f8b626c.image.png?v=1734853623685"
+            alt="Avatar"
+            class="image"
+          />
+          <div class="overlay">
+            <div class="text">
+              <!-- adds description for the suspect -->
+              The Royal Family’s Maid: Although the maid seemed to have a
+              neutral relationship with the gardener, her nervousness when
+              questioned raises suspicion. She may have known something about
+              the gardener’s personal life or been involved in a hidden dispute,
+              though her motive seems weaker than the other suspects.
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <!-- Image for the fourth suspect (Hover) -->
+          <img
+            src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/a692b5fb-3d19-4db8-80d8-cca29335ea0d.image.png?v=1734854021074"
+            alt="Avatar"
+            class="image"
+          />
+          <div class="overlay">
+            <div class="text">
+              <!-- adds description for the suspect -->
+              The Gardener’s Close Friend (The Apprentice): The apprentice had a
+              personal relationship with the gardener, and rumors of a recent
+              falling out raise suspicion. Though not seen at the scene,
+              jealousy or resentment could have driven the attack, and the
+              gardener’s absence may indicate tension between them.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- Section that asks the player abouut the true suspect -->
+        <label for="suspect-input"
+          >Which do you think is the suspect? Enter A, B, C, or D:</label
+        ><br />
+        <!-- fixes the type, id, maxlength, and placeholder of the input box -->
+        <input
+          type="text"
+          id="suspect-input"
+          maxlength="1"
+          placeholder="A, B, C, or D"
+        />
+        <!-- adds button for the submission box of the player's input -->
+        <button onclick="submitSuspect()">Submit</button>
+      </div>
+      <!-- creates ID for the result -->
+      <p id="result"></p>
+      
+    </div>
+    <footer>
+      <!-- creates a footer for the game-->
+      <p>&copy; 2024 Mystwood Mysteries. All Rights Reserved.</p>
+      
+      <p><!-- References for the pictures used-->
+        Alfadanz. (n.d.). 830+ Cleaning Lady Silhouette stock Illustrations,
+        Royalty-Free vector graphics clip art - iStock.
+        https://www.istockphoto.com/illustrations/cleaning-lady-silhouette
+      </p>
+      <p>
+        Broken shards of glass. (n.d.). Adobe Stock. Retrieved December 23,
+        2024, from https://stock.adobe.com/search?k=glass+shard
+      </p>
+      <p>
+        Kula, E. S. (n.d.). Farmer Illustration Clipart. Retrieved December 23,
+        2024, from https://www.gettyimages.com/illustrations/clip-art-farmer
+      </p>
+      <p>
+        Watson, K. (2024, January 1). 9 Pocket Watch Clipart! - the Graphics
+        Fairy. The Graphics Fairy.
+        https://thegraphicsfairy.com/vintage-clip-art-black-and-white-pocket-watches/
+      </p>
+      <p>
+        Royal Butler illustration. (n.d.). Adobe Stock. Retrieved December 23,
+        2024, from https://stock.adobe.com/search/images?k=butler%20silhouette
+      </p>
+    </footer>
+    <script src="hard.js"></script>
+  </body>
+</html>
