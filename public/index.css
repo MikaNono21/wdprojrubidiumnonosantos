@@ -59,6 +59,25 @@ body {
   padding: 20px;
 }
 
+/* Position the image at the upper right corner and fix it */
+.image-button {
+  position: fixed;  /* Makes the image stay in place even while scrolling */
+  top: 20px;  /* Adjust the distance from the top */
+  right: 20px; /* Adjust the distance from the right */
+  display: inline-block;
+}
+
+.image-button img {
+  width: 100px;  /* Adjust the size of the image */
+  height: auto;  /* Maintain aspect ratio */
+  cursor: pointer;
+}
+
+.image-button img:hover {
+  opacity: 0.8;  /* Add a hover effect */
+}
+
+
 /* Title h1 style with custom font '28 Days Later' */
 .title {
   color: var(--color-text-header);
