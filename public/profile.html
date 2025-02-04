@@ -1,24 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="author" content="Mariana Santos, Mikaela Nono" />
-    <title>Player's Profile</title>
-    <link rel="stylesheet" type="text/css" href="profile.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/106828956-flat-design-royal-crown-element-of-kingdom-head-king-queen-princess-prince-symbol-of-majestic-removebg-preview.png?v=1734943628491"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detective Profile - Mystwood Mysteries</title>
+    <link rel="stylesheet" href="profile.css" />
+    <style>
+      .profile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%; /* Makes it a circle */
+        object-fit: cover; /* Ensures the image fills the space properly */
+        border: 3px solid #333;
+        margin-bottom: 10px; /* Adds spacing between image and file input */
+      }
+      .custom-file-upload {
+        display: inline-block;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #333;
+        color: white;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+      .custom-file-upload:hover {
+        background-color: #555;
+      }
+      #upload {
+        display: none;
+      }
+    </style>
   </head>
   <body>
-    <h1> Profile </h1>
+    <div class="profile-container">
+      <h1>Detective Profile</h1>
+      <img
+        id="profile-pic"
+        src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/profile-placeholder.png"
+        alt="Profile Picture"
+        class="profile-pic"
+      />
+      <label for="upload" class="custom-file-upload">Choose File</label>
+      <input type="file" id="upload" accept="image/*" />
+      <h2 id="username">Detective Name</h2>
+      <p><strong>Cases Solved:</strong> <span id="cases-solved">0</span></p>
+      <p><strong>Difficulty Level:</strong> <span id="difficulty">Easy</span></p>
+      <button onclick="logout()" class="logout-button">Logout</button>
+    </div>
+
+    <script>
+      document.getElementById("upload").addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("profile-pic").src = e.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      function logout() {
+        alert("Logging out...");
+        window.location.href = "index.html"; // Redirect to home page
+        
+        // credits: https://uploadcare.com/blog/how-to-upload-files-using-js/
+      }
+    </script>
   </body>
 </html>
-   
-    
