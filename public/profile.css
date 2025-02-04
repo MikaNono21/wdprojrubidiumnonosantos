@@ -1,0 +1,10 @@
+body {
+  font-family: Copperplate, Papyrus, fantasy;
+  background-color: var(--color-bg);
+  background-image: url("https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/1b0de0c7-3a52-4dc1-8d7f-f0e05a97f436.image.png?v=1734688196560");
+  background-size: cover;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
