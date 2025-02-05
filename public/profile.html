@@ -39,41 +39,56 @@
       }
     </style>
   </head>
-  <body>
-    <div class="profile-container">
-      <h1>Detective Profile</h1>
-      <img
-        id="profile-pic"
-        src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/profile-placeholder.png"
-        alt="Profile Picture"
-        class="profile-pic"
-      />
-      <label for="upload" class="custom-file-upload">Choose File</label>
-      <input type="file" id="upload" accept="image/*" />
-      <h2 id="username">Detective Name</h2>
-      <p><strong>Cases Solved:</strong> <span id="cases-solved">0</span></p>
-      <p><strong>Difficulty Level:</strong> <span id="difficulty">Easy</span></p>
-      <button onclick="logout()" class="logout-button">Logout</button>
-    </div>
+<body>
+  <div class="profile-container">
+    <h1>Detective Profile</h1>
+    <img
+      id="profile-pic"
+      src="https://cdn.glitch.global/88710779-0ec0-4268-93f7-8e7c825ce836/profile-placeholder.png"
+      alt="Profile Picture"
+      class="profile-pic"
+    />
+    <label for="upload" class="custom-file-upload">Choose File</label>
+    <input type="file" id="upload" accept="image/*" />
+    <h2 id="username">Hello Detective</h2> <!-- Default greeting before name input -->
+    <p><strong>Cases Solved:</strong> <span id="cases-solved">0</span></p>
+    <p><strong>Difficulty Level:</strong> <span id="difficulty">Easy</span></p>
+    <button onclick="logout()" class="logout-button">Logout</button>
+  </div>
 
-    <script>
-      document.getElementById("upload").addEventListener("change", function (event) {
-        const file = event.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = function (e) {
-            document.getElementById("profile-pic").src = e.target.result;
-          };
-          reader.readAsDataURL(file);
+  <script>
+    // When the page loads, check if the username is in sessionStorage
+    window.onload = function () {
+      const storedUsername = sessionStorage.getItem("username");
+      if (!storedUsername) {
+        const userNameInput = prompt("What is your name, detective?");
+        if (userNameInput) {
+          sessionStorage.setItem("username", userNameInput); // Store the name
+          document.getElementById("username").innerText = `Hello Detective, ${userNameInput}`; // Update the greeting
         }
-      });
-
-      function logout() {
-        alert("Logging out...");
-        window.location.href = "index.html"; // Redirect to home page
-        
-        // credits: https://uploadcare.com/blog/how-to-upload-files-using-js/
+      } else {
+        // If username is already stored, use it
+        document.getElementById("username").innerText = `Hello Detective, ${storedUsername}`;
       }
-    </script>
-  </body>
+    };
+
+    document.getElementById("upload").addEventListener("change", function (event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById("profile-pic").src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    function logout() {
+      // Remove username from sessionStorage when logging out
+      sessionStorage.removeItem("username");
+      alert("Logging out...");
+      window.location.href = "index.html"; // Redirect to home page
+    }
+  </script>
+</body>
 </html>
