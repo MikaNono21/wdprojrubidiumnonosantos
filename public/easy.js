@@ -1,43 +1,52 @@
-function change_tab(id) {
-  // Hide all tab contents
-  const tabs = document.querySelectorAll(".tab-content");
-  tabs.forEach((tab) => tab.classList.remove("active"));
-
-  // Reset all tab buttons to not selected
-  const buttons = document.querySelectorAll("ul li");
-  buttons.forEach((button) => button.classList.remove("selected"));
-  buttons.forEach((button) => button.classList.add("notselected"));
-
-  // Show the clicked tab's content
-  document.getElementById(id + "_content").classList.add("active");
-
-  // Highlight the clicked tab button
-  document.getElementById(id).classList.add("selected");
-  document.getElementById(id).classList.remove("notselected");
-}
-
-//Makes a function to reveal and display the image as block
+// Function to reveal the case image when the button is clicked
 function revealImage() {
-  const imageContainer = document.getElementById("image-container");
+  var imageContainer = document.getElementById("image-container");
   imageContainer.style.display = "block";
 }
 
-// makes a function for the submitted answer
-function submitSuspect() {
-  const input = document
-    .getElementById("suspect-input") //gets the value
-    .value.trim() //trims the value
-    .toUpperCase(); // makes the value uppercase whenever 
-  const resultElement = document.getElementById("result");
+// Changes the selected tab in the case
+function change_tab(tab_id) {
+  var tabs = document.querySelectorAll("ul li");
+  var contents = document.querySelectorAll(".tab-content");
+  
+  // Remove the 'selected' class from all tabs
+  tabs.forEach(function (tab) {
+    tab.classList.remove("selected");
+    tab.classList.add("notselected");
+  });
+  
+  // Hide all tab content
+  contents.forEach(function (content) {
+    content.classList.remove("active");
+  });
+  
+  // Add 'selected' class to the clicked tab
+  document.getElementById(tab_id).classList.add("selected");
+  
+  // Show the content related to the clicked tab
+  document.getElementById(tab_id + "_content").classList.add("active");
+}
 
-  if (input === "B") {
-    //makes an if statement -- input B is correct
-    alert("Correct! You’ve solved the case and earned $100,000!"); //pops an alert message of if player wins 
-  } else if (["A", "C"].includes(input)) {
-    //makes an else if statement -- input A and C are incorrect
-    // Incorrect answers
-    alert("Wrong suspect! Try again and Review the Evidences."); //-- pops an alert message of if player loses
+// Function to handle the suspect input and update solved cases
+function submitSuspect() {
+  var suspectInput = document.getElementById("suspect-input").value.toUpperCase().trim();
+  var result = document.getElementById("result");
+
+  if (suspectInput === "B") {
+    result.textContent = "Correct! The Lady-in-Waiting is the thief! You Earned $100,000";
+    // Updating the solved case on the profile page
+    localStorage.setItem("easy_case_solved", "true");
+    updateProfile(); // Function to update profile
   } else {
-    alert("Invalid input. Please enter A, B,or C"); //pops an alert message of if player inputted wrong value
+    result.textContent = "Incorrect! Try again.";
+  }
+}
+
+// Function to update the profile page with solved case
+function updateProfile() {
+  var solvedCase = localStorage.getItem("easy_case_solved");
+  if (solvedCase === "true") {
+    // Assume we have an element on the profile page to show solved cases
+    document.getElementById("easy-case-status").textContent = "Easy Case: Solved!";
   }
 }
