@@ -55,7 +55,7 @@ function updateProfile() {
     // Update the status of the easy case in the profile
     document.getElementById("easy-case-status").textContent = "Easy Case: Solved!";
     
-    // Optionally, update the total cases solved (if you have this logic set up)
+    // update the total cases solved 
     let totalSolved = parseInt(document.getElementById("cases-solved").textContent) || 0;
     document.getElementById("cases-solved").textContent = totalSolved + 1;
   }
