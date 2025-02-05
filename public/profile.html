@@ -64,7 +64,7 @@
         const userNameInput = prompt("What is your name, detective?");
         if (userNameInput) {
           sessionStorage.setItem("username", userNameInput); // Store the name
-          document.getElementById("username").innerText = `Hello Detective ${userNameInput}'; // Update the greeting
+          document.getElementById("username").innerText = `Hello Detective, ${userNameInput}`; // Update the greeting
         }
       } else {
         // If username is already stored, use it
