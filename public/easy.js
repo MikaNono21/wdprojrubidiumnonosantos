@@ -32,18 +32,22 @@ function submitSuspect() {
   var suspectInput = document.getElementById("suspect-input").value.toUpperCase().trim();
   var result = document.getElementById("result");
 
+  // Get the detective's name from sessionStorage
+  const detectiveName = sessionStorage.getItem("username");
+
   if (suspectInput === "B") { // Correct suspect is 'B' (Lady-in-Waiting)
     result.textContent = "Correct! The Lady-in-Waiting is the thief!";
     
-    // Update the case as solved in localStorage
-    localStorage.setItem("easy_case_solved", "true");
+    // Update the case as solved in localStorage, using the detective's name
+    localStorage.setItem(`${detectiveName}_easy_case_solved`, "true");
     
-    // Now update the profile to reflect the solved case
+    // update the profile to reflect the solved case
     updateProfile();
   } else {
     result.textContent = "Incorrect! Try again.";
   }
 }
+
 
 // Function to update the profile page with solved case
 function updateProfile() {
