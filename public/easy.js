@@ -32,35 +32,21 @@ function submitSuspect() {
   var suspectInput = document.getElementById("suspect-input").value.toUpperCase().trim();
   var result = document.getElementById("result");
 
-  // Get the detective's name from sessionStorage
-  const detectiveName = sessionStorage.getItem("username");
-
-  if (suspectInput === "B") { // Correct suspect is 'B' (Lady-in-Waiting)
+  if (suspectInput === "B") {
     result.textContent = "Correct! The Lady-in-Waiting is the thief!";
-    
-    // Update the case as solved in localStorage, using the detective's name
-    localStorage.setItem(`${detectiveName}_easy_case_solved`, "true");
-    
-    // update the profile to reflect the solved case
-    updateProfile();
+    // Updating the solved case on the profile page
+    localStorage.setItem("easy_case_solved", "true");
+    updateProfile(); // Function to update profile
   } else {
     result.textContent = "Incorrect! Try again.";
   }
 }
 
-
 // Function to update the profile page with solved case
 function updateProfile() {
-  // Get the solved case status from localStorage
   var solvedCase = localStorage.getItem("easy_case_solved");
-
-  // If the case is marked as solved, update the profile
   if (solvedCase === "true") {
-    // Update the status of the easy case in the profile
+    // Assume we have an element on the profile page to show solved cases
     document.getElementById("easy-case-status").textContent = "Easy Case: Solved!";
-    
-    // update the total cases solved 
-    let totalSolved = parseInt(document.getElementById("cases-solved").textContent) || 0;
-    document.getElementById("cases-solved").textContent = totalSolved + 1;
   }
 }
