@@ -33,7 +33,7 @@ function submitSuspect() {
   var result = document.getElementById("result");
 
   if (suspectInput === "B") {
-    result.textContent = "Correct! The Lady-in-Waiting is the thief! You Earned $100,000";
+    result.textContent = "Correct! The Lady-in-Waiting is the thief!";
     // Updating the solved case on the profile page
     localStorage.setItem("easy_case_solved", "true");
     updateProfile(); // Function to update profile
