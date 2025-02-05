@@ -32,11 +32,14 @@ function submitSuspect() {
   var suspectInput = document.getElementById("suspect-input").value.toUpperCase().trim();
   var result = document.getElementById("result");
 
-  if (suspectInput === "B") {
+  if (suspectInput === "B") { // Correct suspect is 'B' (Lady-in-Waiting)
     result.textContent = "Correct! The Lady-in-Waiting is the thief!";
-    // Updating the solved case on the profile page
+    
+    // Update the case as solved in localStorage
     localStorage.setItem("easy_case_solved", "true");
-    updateProfile(); // Function to update profile
+    
+    // Now update the profile to reflect the solved case
+    updateProfile();
   } else {
     result.textContent = "Incorrect! Try again.";
   }
@@ -44,9 +47,16 @@ function submitSuspect() {
 
 // Function to update the profile page with solved case
 function updateProfile() {
+  // Get the solved case status from localStorage
   var solvedCase = localStorage.getItem("easy_case_solved");
+
+  // If the case is marked as solved, update the profile
   if (solvedCase === "true") {
-    // Assume we have an element on the profile page to show solved cases
+    // Update the status of the easy case in the profile
     document.getElementById("easy-case-status").textContent = "Easy Case: Solved!";
+    
+    // Optionally, update the total cases solved (if you have this logic set up)
+    let totalSolved = parseInt(document.getElementById("cases-solved").textContent) || 0;
+    document.getElementById("cases-solved").textContent = totalSolved + 1;
   }
 }
