@@ -170,3 +170,31 @@ footer {
 footer p {
   margin: 5px 0;
 }
+
+.icon {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background: url("https://cdn.glitch.global/f27dcf95-571c-42c5-acb8-2eeca92e9cbb/sprites.png?v=1739538416076")
+    no-repeat;
+}
+.facebook {
+  background-position: -226px -129px;
+}
+.twitter {
+  background-position: -340px -129px;
+}
+.github {
+  background-position: -456px -129px;
+}
+
+.facebook:hover {
+  background-position: -226px -55px;
+}
+.twitter:hover {
+  background-position: -340px -54px;
+}
+.github:hover {
+  background-position: -456px -54px;
+}
+
