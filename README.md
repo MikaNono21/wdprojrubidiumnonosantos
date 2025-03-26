@@ -32,9 +32,10 @@ profile {
 
 Our user will be able to see future possible locations as well, which will be unlocked as they continue to play the game. This webpage will incorporate both css and html for the layout and design, and js to save user information to the server, and further reflect their pending mysteries and those waiting to be unlocked. This dynamic website aims to make the experience more realistic and deep for our player. To enhance gameplay, the map will dynamically track which locations the user has visited and which remain locked. As they progress in the game, previously inaccessible locations will become available, reflecting their in-game decisions. This will be accomplished by saving the user’s exploration data to the server, ensuring they can pick up where they left off. 
 
-### Type of data: Location Tracking & Progress Data
-### Purpose: To track the locations the player has explored and store hints or clues found in each area.
+Type of data: Location Tracking & Progress Data
+Purpose: To track the locations the player has explored and store hints or clues found in each area.
 
+### Structure in JSON format:  
 map_data {
    user_id: text-string,  
    unlocked_locations: array of text-strings,  // Stores names of locations the player has unlocked  
@@ -49,10 +50,10 @@ map_data {
 
 In addition to reading character descriptions, players will be able to track which characters they have viewed and mark certain individuals as suspects or favorites. These interactions will be saved on the server, allowing players to reference their investigations at any time. This will make the mystery-solving process more intuitive and allow players to track their progress in identifying potential culprits. To further assist players in solving the mystery, this webpage will include an interactive notepad where they can write down their observations and theories. The notepad will be a simple text area that automatically saves any notes entered, ensuring players don’t lose their insights even if they leave the page.
 
-### Type of data: Player Investigation & Preferences
-### Purpose: To track the player's notes, visited locations, and favorite characters to enhance the interactive experience.
+Type of data: Player Investigation & Preferences
+Purpose: To track the player's notes, visited locations, and favorite characters to enhance the interactive experience.
 
-Structure in JSON format:
+### Structure in JSON format:
 characterNotes {
    username: text-string,  
    notepad: text-string,  // Stores investigation notes, will use html forms for this
