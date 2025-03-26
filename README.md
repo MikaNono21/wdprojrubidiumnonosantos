@@ -7,6 +7,10 @@ Welcome, Detective. You’ve proven yourself capable of cracking a case. But thi
 Are you ready to put your sleuthing skills to the test and embark on a mysterious and thrilling journey? 🔎🌲
 
 ## 4th Quarter Proj Update
+← `Map.html`: Map of the Village - This webpage gives the user a more immersive overview on the overall town our characters’ mysteries revolve around. Hover on each one and it contains details and descriptions about this enchanting place, but not everything is so it seems. Take a closer look and you might find hints to help you solve the crimes. But beware, some secrets are meant to stay buried, and danger may lurk where u least expect it. Explore at your own risk, for every shadow in Mystwood holds a story waiting to be uncovered.
+
+Our user will be able to see future possible locations as well, which will be unlocked as they continue to play the game. This webpage will incorporate both css and html for the layout and design, and js to save user information to the server, and further reflect their pending mysteries and those waiting to be unlocked. This dynamic website aims to make the experience more realistic and deep for our player. 
+
 
 
 ## Outline:
