@@ -9,8 +9,8 @@ Are you ready to put your sleuthing skills to the test and embark on a mysteriou
 ## 4th Quarter Proj Update
 ← `profile.html`: This is already a pre-existing webpage, but we would like to update part of this to be able to save our information in our progress tracking part, along with the account log in details of the user. It will inform our player what levels they are done, in progress, or have not attempted yet, and will make the website more customized.
 
-### Type of data: User Profile Data  
-### Purpose: To store user details, track progress, and send updates  
+Type of data: User Profile Data  
+Purpose: To store user details, track progress, and send updates  
 
 ### Structure in JSON format:  
 profile {  
