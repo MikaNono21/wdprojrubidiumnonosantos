@@ -11,7 +11,8 @@ Are you ready to put your sleuthing skills to the test and embark on a mysteriou
 
 Additionally, the profile will store the user’s preferred pronouns, email for game updates, and a profile picture. The stored data will enhance the gameplay experience by allowing progress tracking, customization, and potential future features such as achievements or special in-game rewards. Users will also have the ability to edit or delete their saved data.
 
-Type of data: User Profile Data  
+
+Type of data: User Profile Data
 Purpose: To store user details, track progress, and send updates  
 
 ### Structure in JSON format:  
