@@ -12,8 +12,8 @@ Are you ready to put your sleuthing skills to the test and embark on a mysteriou
 Additionally, the profile will store the user’s preferred pronouns, email for game updates, and a profile picture. The stored data will enhance the gameplay experience by allowing progress tracking, customization, and potential future features such as achievements or special in-game rewards. Users will also have the ability to edit or delete their saved data.
 
 
-Type of data: User Profile Data
-Purpose: To store user details, track progress, and send updates  
+### Type of data: User Profile Data
+### Purpose: To store user details, track progress, and send updates  
 
 ### Structure in JSON format:  
 profile {  
@@ -37,7 +37,8 @@ Type of data: Location Tracking & Progress Data
 Purpose: To track the locations the player has explored and store hints or clues found in each area.
 
 ### Structure in JSON format:  
-map_data {
+map_data{
+
    user_id: text-string,  
    unlocked_locations: array of text-strings,  // Stores names of locations the player has unlocked  
    visited_locations: array of text-strings,  // Stores locations the player has explored  
@@ -56,6 +57,7 @@ Purpose: To track the player's notes, visited locations, and favorite characters
 
 ### Structure in JSON format:
 characterNotes{
+
    username: text-string,  
    notepad: text-string,  // Stores investigation notes, will use html forms for this
    last_updated: date-time,  // Tracks last modification time  
