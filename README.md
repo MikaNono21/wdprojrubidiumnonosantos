@@ -55,7 +55,7 @@ Type of data: Player Investigation & Preferences
 Purpose: To track the player's notes, visited locations, and favorite characters to enhance the interactive experience.
 
 ### Structure in JSON format:
-characterNotes {
+characterNotes{
    username: text-string,  
    notepad: text-string,  // Stores investigation notes, will use html forms for this
    last_updated: date-time,  // Tracks last modification time  
