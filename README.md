@@ -68,7 +68,7 @@ characterNotes{
 }
 
 
-### Wireframe (refer to page 7 & 8)
+### Wireframe (refer to page 7,8,9)
 https://www.canva.com/design/DAGWpOdrw8w/EeTBHSk1ZaNpHlRQI9dK6Q/edit?ui=eyJEIjp7IlQiOnsiQSI6IlBCTDBIZnhYbTlLRHJUSEcifX19
 
 
