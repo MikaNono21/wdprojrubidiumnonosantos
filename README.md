@@ -6,6 +6,9 @@ Welcome, Detective. You’ve proven yourself capable of cracking a case. But thi
 
 Are you ready to put your sleuthing skills to the test and embark on a mysterious and thrilling journey? 🔎🌲
 
+## 4th Quarter Proj Update
+
+
 ## Outline:
 
 ← `index.hbs`: Home Screen - contains introduction to game, buttons to all levels, and account/progress tracker of player.
