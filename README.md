@@ -7,8 +7,9 @@ Welcome, Detective. You’ve proven yourself capable of cracking a case. But thi
 Are you ready to put your sleuthing skills to the test and embark on a mysterious and thrilling journey? 🔎🌲
 
 ## 4th Quarter Proj Update
-← `profile.html`: This is already a pre-existing webpage, but we would like to update part of this to be able to save our information in our progress tracking part, along with the account log in details of the user. It will inform our player what levels they are done, in progress, or have not attempted yet, and will make the website more customized.
+← `profile.html`: This is an existing webpage, but we are updating it to allow users to save their information for progress tracking and account login details. Players will be able to view which levels they have completed, which are in progress, and which they have not attempted yet. This update will make the game more personalized by tailoring the experience based on the user's progress.
 
+Additionally, the profile will store the user’s preferred pronouns, email for game updates, and a profile picture. The stored data will enhance the gameplay experience by allowing progress tracking, customization, and potential future features such as achievements or special in-game rewards. Users will also have the ability to edit or delete their saved data.
 Type of data: User Profile Data  
 Purpose: To store user details, track progress, and send updates  
 
