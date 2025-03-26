@@ -22,9 +22,9 @@ profile {
    email: email-formatted-text-string,  
    profile_picture: text-link-to-the-uploaded-pix,  
    progress: {  
-      level1: text-string,  // e.g., "completed", "in progress", "not attempted"  
-      level2: text-string,  
-      level3: text-string  
+      easyLevel: text-string,  // e.g., "completed", "in progress", "not attempted"  
+      mediumLevel: text-string,  
+      hardLevel: text-string  
    }  
 }  
 
