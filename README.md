@@ -10,6 +10,7 @@ Are you ready to put your sleuthing skills to the test and embark on a mysteriou
 ← `profile.html`: This is an existing webpage, but we are updating it to allow users to save their information for progress tracking and account login details. Players will be able to view which levels they have completed, which are in progress, and which they have not attempted yet. This update will make the game more personalized by tailoring the experience based on the user's progress.
 
 Additionally, the profile will store the user’s preferred pronouns, email for game updates, and a profile picture. The stored data will enhance the gameplay experience by allowing progress tracking, customization, and potential future features such as achievements or special in-game rewards. Users will also have the ability to edit or delete their saved data.
+
 Type of data: User Profile Data  
 Purpose: To store user details, track progress, and send updates  
 
