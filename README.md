@@ -16,8 +16,9 @@ Our user will be able to see future possible locations as well, which will be un
 For server saving data:
 ← `profile.html`: This is already a pre-existing webpage, but we would like to update the javascript part of this to be able to save our information in our progress tracking part. It will inform our player what levels they are done, in progress, or have not attempted yet. 
 
-### Wireframe
+### Wireframe (refer to page 7 & 8)
 https://www.canva.com/design/DAGWpOdrw8w/EeTBHSk1ZaNpHlRQI9dK6Q/edit?ui=eyJEIjp7IlQiOnsiQSI6IlBCTDBIZnhYbTlLRHJUSEcifX19
+
 
 
 
