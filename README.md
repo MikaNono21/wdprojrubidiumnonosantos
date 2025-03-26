@@ -43,7 +43,7 @@ map_data{
    unlocked_locations: array of text-strings,  // Stores names of locations the player has unlocked  
    visited_locations: array of text-strings,  // Stores locations the player has explored  
    discovered_clues: array of objects [
-   		location: text-string
+   		location: text-string,
      		clue: text-string 
        ]// Stores hints or clues found in different locations  
    last_updated: date-time  // Tracks the last time data was modified  
