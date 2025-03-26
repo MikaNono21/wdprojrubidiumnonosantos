@@ -30,11 +30,36 @@ profile {
 
 ← `Map.html`: Map of the Village - This webpage gives the user a more immersive overview on the overall town our characters’ mysteries revolve around. Hover on each one and it contains details and descriptions about this enchanting place, but not everything is so it seems. Take a closer look and you might find hints to help you solve the crimes. But beware, some secrets are meant to stay buried, and danger may lurk where u least expect it. Explore at your own risk, for every shadow in Mystwood holds a story waiting to be uncovered.
 
-Our user will be able to see future possible locations as well, which will be unlocked as they continue to play the game. This webpage will incorporate both css and html for the layout and design, and js to save user information to the server, and further reflect their pending mysteries and those waiting to be unlocked. This dynamic website aims to make the experience more realistic and deep for our player. 
+Our user will be able to see future possible locations as well, which will be unlocked as they continue to play the game. This webpage will incorporate both css and html for the layout and design, and js to save user information to the server, and further reflect their pending mysteries and those waiting to be unlocked. This dynamic website aims to make the experience more realistic and deep for our player. To enhance gameplay, the map will dynamically track which locations the user has visited and which remain locked. As they progress in the game, previously inaccessible locations will become available, reflecting their in-game decisions. This will be accomplished by saving the user’s exploration data to the server, ensuring they can pick up where they left off. 
+
+### Type of data: Location Tracking & Progress Data
+### Purpose: To track the locations the player has explored and store hints or clues found in each area.
+
+map_data {
+   user_id: text-string,  
+   unlocked_locations: array of text-strings,  // Stores names of locations the player has unlocked  
+   visited_locations: array of text-strings,  // Stores locations the player has explored  
+   discovered_clues: array of objects [
+   		location: text-string
+     		clue: text-string ]// Stores hints or clues found in different locations  
+   last_updated: date-time  // Tracks the last time data was modified  
+}
 
 ← `Characters.html`: Meet the Characters - This webpage is essential so that the players will get to know more about the roles and backgrounds of the people in the Mystwood kingdom. Once they understand the descriptions of each character, they will gain insights into each character’s personality and motives. This can be a great way to let them have easier decision making and solving the mysteries in the game. This page serves as a helpful guide throughout the player’s journey in playing the game. The Character Profiles webpage introduces the key characters of Mystwood Kingdom. With the king, and queen away on an important trip to England to visit King Charles III, the prince and princess have been left in charge of the palace. Alongside him are the castle guard, the housekeeper, and the lady-in-waiting. The royal family’s maid, the royal butler, a neighboring farmer, a townsperson, etc. With this webpage, the player will get to know each character and learn about their backgrounds.
 
+In addition to reading character descriptions, players will be able to track which characters they have viewed and mark certain individuals as suspects or favorites. These interactions will be saved on the server, allowing players to reference their investigations at any time. This will make the mystery-solving process more intuitive and allow players to track their progress in identifying potential culprits. To further assist players in solving the mystery, this webpage will include an interactive notepad where they can write down their observations and theories. The notepad will be a simple text area that automatically saves any notes entered, ensuring players don’t lose their insights even if they leave the page.
 
+### Type of data: Player Investigation & Preferences
+### Purpose: To track the player's notes, visited locations, and favorite characters to enhance the interactive experience.
+
+Structure in JSON format:
+characterNotes {
+   username: text-string,  
+   notepad: text-string,  // Stores investigation notes, will use html forms for this
+   last_updated: date-time,  // Tracks last modification time  
+   visited_locations: array of text-strings,  // Stores names of locations visited  
+   favorite_characters: array of text-strings  // Stores names of favorite characters  
+}
 
 
 ### Wireframe (refer to page 7 & 8)
