@@ -13,6 +13,9 @@ Our user will be able to see future possible locations as well, which will be un
 
 ← `Characters.html`: Meet the Characters - This webpage is essential so that the players will get to know more about the roles and backgrounds of the people in the Mystwood kingdom. Once they understand the descriptions of each character, they will gain insights into each character’s personality and motives. This can be a great way to let them have easier decision making and solving the mysteries in the game. This page serves as a helpful guide throughout the player’s journey in playing the game. The Character Profiles webpage introduces the key characters of Mystwood Kingdom. With the king, and queen away on an important trip to England to visit King Charles III, the prince and princess have been left in charge of the palace. Alongside him are the castle guard, the housekeeper, and the lady-in-waiting. The royal family’s maid, the royal butler, a neighboring farmer, a townsperson, etc. With this webpage, the player will get to know each character and learn about their backgrounds.
 
+For server saving data:
+← `profile.html`: This is already a pre=existing webpage, but we would like to update the javascript part of this to be able to save our information in our progress tracking part. It will inform our player what levels they are done, in progress, or have not attempted yet. 
+
 ### Wireframe
 https://www.canva.com/design/DAGWpOdrw8w/EeTBHSk1ZaNpHlRQI9dK6Q/edit?ui=eyJEIjp7IlQiOnsiQSI6IlBCTDBIZnhYbTlLRHJUSEcifX19
 
